@@ -6,6 +6,9 @@
    DATE:	Feb 8, 2000
    REVISION:
    ************************************************************************ */
+#ifndef DFILTER_GFIR_HDR
+#define DFILTER_GFIR_HDR
+
 #define POINTS  256	/* Maximum number of points to calculate */
 //#define POINTS  40000	/* Maximum number of points to calculate */
 
@@ -22,3 +25,5 @@ struct dfilter {
 	double logamp[POINTS];		/* Amplitude in log scale */
 	double max;			/* Maximum of amplitude */
 };
+
+#endif /* DFILTER_GFIR_HDR */

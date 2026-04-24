@@ -12,9 +12,6 @@
 
 #include "rounding.h"
 
-void int2csd(int a, int cprec, int csdprec, int * bincode, int * csdcode, int * csdcoder); 
-int csd2int(int cprec, int *code);
-
 /* ************************************************************************ 
    ************************************************************************ */
 void round2int(double *a, double *b, int n, int cprec)

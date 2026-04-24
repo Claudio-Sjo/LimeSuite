@@ -23,11 +23,6 @@
 #define EVEN    0
 #define ODD     1
 
-/* Declare functions from Numerical Recipes that are used here */
-double  *vector(int nl, int nh);
-int  *ivector(int nl, int nh);
-double  **matrix(int nrl, int nrh, int ncl, int nch);
-    
 /* ************************************************************************ 
  *  Trigonometric functions for CASE1, CASE2, CASE3 and CASE4 filters
  *

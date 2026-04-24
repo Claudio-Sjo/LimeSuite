@@ -12,6 +12,10 @@
 #include <stdlib.h>
 #include <math.h>
 
+#ifdef	__cplusplus
+extern "C" {
+#endif
+
 /* This two parameters define filter symmetry */
 #define POSITIVE	(1)
 #define NEGATIVE	(-1)
@@ -22,14 +26,15 @@
 
 /* Amplitude correction functions */
 double InvSinc(double x);
-double InvSincS(double x);
+double InvSincS(double x, double k, double x0);
 double One(double x);
 
 /* Amplitude correction functions we can support */
 #define NONE		One		/* Constant */
 #define ONE		One		/* as well */
 #define INVSINC		InvSinc		/* Iverse sinc */
-#define INVSINCS	InvSincS	/* Shifted Inverse Sinc */
+/* INVSINCS not usable as a correction function pointer (signature mismatch) */
+/* #define INVSINCS	InvSincS */
 
 /* Cosine filter type selection */
 #define RAISEDCOSINE		1
@@ -39,5 +44,9 @@ int lms(double * hr, double * hi, double * hcsd, int n,
 	double * w, double * des, double * weight, int p, 
 	int cprec, int csdprec, int symmetry,
 	int ** bincode, int ** csdcode, int **csdcoder); 
+
+#ifdef	__cplusplus
+}
+#endif
 
 #endif

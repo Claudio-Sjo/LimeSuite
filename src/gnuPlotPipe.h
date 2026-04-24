@@ -40,7 +40,7 @@ public:
 
     void writef(const char* format, ...)
     {
-        static char temp[512];
+        char temp[512];
         va_list argList;
         va_start(argList, format);
         vsnprintf(temp, 512, format, argList);

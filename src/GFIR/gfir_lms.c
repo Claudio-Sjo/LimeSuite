@@ -21,7 +21,7 @@
 #define CSDPREC		16	/* CSD Coefficients precision */
 
 /* *********************************************************************** */
-int gfir_lms(struct dfilter *hr, struct dfilter *hi, struct dfilter *hcsd,
+static int gfir_lms(struct dfilter *hr, struct dfilter *hi, struct dfilter *hcsd,
              int n,
              double w1, double w2, double a1, double a2,
              int cprec,

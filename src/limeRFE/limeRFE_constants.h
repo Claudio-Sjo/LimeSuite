@@ -5,7 +5,6 @@
 
 #include <fcntl.h>    // File control definitions
 #include "lime/LimeSuite.h"
-using namespace std;
 #include <string.h>
 #include <math.h>
 
@@ -160,7 +159,7 @@ struct guiState
 	double rlCorr;
 };
 
-#if __cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -206,7 +205,7 @@ extern "C" {
 	int i2c_write_buffer(lms_device_t* lms, unsigned char* c, int size);
 	int i2c_read_buffer(lms_device_t* lms, unsigned char* c, int size);
 
-#if __cplusplus
+#ifdef __cplusplus
 }
 #endif
 

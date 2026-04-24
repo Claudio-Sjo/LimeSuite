@@ -39,7 +39,7 @@ enum eLMS_DEV
     LMS_DEV_COUNT
 };
 
-const char LMS_DEV_NAMES[][80] =
+static const char LMS_DEV_NAMES[][80] =
 {
     "UNKNOWN",
     "EVB6",
@@ -93,7 +93,7 @@ enum eEXP_BOARD
     EXP_BOARD_COUNT
 };
 
-const char EXP_BOARD_NAMES[][80] =
+static const char EXP_BOARD_NAMES[][80] =
 {
     "UNKNOWN",
     "UNSUPPORTED",

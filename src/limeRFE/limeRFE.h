@@ -132,6 +132,7 @@ typedef struct
 extern "C" {
 #endif
 
+#ifndef CALL_CONV
 #if defined _WIN32 || defined __CYGWIN__
 #   define CALL_CONV __cdecl
 #   ifdef __GNUC__
@@ -149,6 +150,7 @@ extern "C" {
 #else
 #   define API_EXPORT __attribute__ ((visibility ("default")))
 #   define CALL_CONV
+#endif
 #endif
 
 
@@ -235,7 +237,7 @@ API_EXPORT int CALL_CONV RFE_Configure(rfe_dev_t* rfe, char channelIDRX, char ch
 *
 * @return              0 on success, other on failure (see LimeRFE error codes)
 */
-API_EXPORT int RFE_ConfigureState(rfe_dev_t* rfe, rfe_boardState state);
+API_EXPORT int CALL_CONV RFE_ConfigureState(rfe_dev_t* rfe, rfe_boardState state);
 
 /**
 *This function gets the state of the LimeRFE board. It's functionality is identical to Cmd_GetConfig internal command
@@ -245,7 +247,7 @@ API_EXPORT int RFE_ConfigureState(rfe_dev_t* rfe, rfe_boardState state);
 *
 * @return              0 on success, other on failure (see LimeRFE error codes)
 */
-API_EXPORT int RFE_GetState(rfe_dev_t* rfe, rfe_boardState *state);
+API_EXPORT int CALL_CONV RFE_GetState(rfe_dev_t* rfe, rfe_boardState *state);
 
 /**
 *This function sets the LimeRFE mode (receive, transmit, both, or none)

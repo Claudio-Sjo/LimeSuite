@@ -52,7 +52,7 @@ REVISIONS:	February 01, 1994: File created.
 
 #define TINY 1.0e-20
 
-void nrerror(char * error_text); 
+
 
 /*****************************************************/
 /*** Allocates a double vector with range [nl..nh]. ***/
@@ -133,7 +133,7 @@ void free_matrix(double **m, int nrl, int nrh, int ncl, int nch)
 /*************************************************/
 /*** Numerical Recipes standard error handler. ***/
 /*************************************************/
-void nrerror(char error_text[])
+void nrerror(const char error_text[])
 {
 	fprintf(stderr,"Numerical Recipes run-time error...\n");
 	fprintf(stderr,"%s\n",error_text);
