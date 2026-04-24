@@ -276,7 +276,7 @@ int Cmd_GetInfo(lms_device_t *dev, RFE_COM com, boardInfo* info) {
 }
 
 int ReadConfig(const char *filename, rfe_boardState *stateBoard, guiState *stateGUI) {
-	typedef INI<string, string, string> ini_t;
+	typedef INI<std::string, std::string, std::string> ini_t;
 	ini_t parser(filename, true);
 
 	if (parser.select("LimeRFE_Board_Settings") == false)
