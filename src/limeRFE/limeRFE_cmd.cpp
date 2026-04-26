@@ -306,7 +306,6 @@ int SaveConfig(const char *filename, rfe_boardState state, guiState stateGUI) {
 	fout = fopen(filename, "w");
 
 	if (fout == NULL) {
-		fclose(fout);
 		return 1;
 	}
 
