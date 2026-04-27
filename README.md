@@ -29,3 +29,8 @@ Information about LimeSDR boards:
 The discourse forum is a good way to find help and discuss topics:
 
 * https://discourse.myriadrf.org/
+
+## Compile on odroid H2 and Ubuntu
+
+After installing the basic Ubuntu, you need to get the needed toolkit as follows:
+:sudo apt-get update && sudo apt-get -y install build-essential clang cmake libfftw3-dev libusb-1.0-0-dev libcurl4-gnutls-dev git tmux
